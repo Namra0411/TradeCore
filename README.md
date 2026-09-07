@@ -38,6 +38,10 @@ g++ -std=c++17 -O2 Benchmark.cpp Book.cpp -o benchmark
 
 `Benchmark.cpp` warms the book up with two-sided resting liquidity, then fires a large mixed stream of adds, cancels, modifies, and market orders at it, timing each request individually. It reports latency percentiles per request type and writes every sample to `benchmark_latencies.csv` for further analysis. On a single-threaded, mixed workload the engine sustains on the order of **millions of requests per second** with sub-microsecond average latency — see the script itself for exact methodology if you want to reproduce it.
 
+## Sample output
+<img width="966" height="530" alt="image" src="https://github.com/user-attachments/assets/96149c2f-2cb9-41b4-b541-7530c692f80f" />
+
+
 ## Known limitations
 
 - Single-threaded, no concurrency support.
